@@ -4,7 +4,6 @@ def automata_termina_ab(cadena):
     Estados: q0 (inicial), q1 (vio 'a'), q2 (aceptación - vio 'ab')
     """
     estado = 'q0'  # Estado inicial
-    
     for simbolo in cadena:
         if estado == 'q0':
             if simbolo == 'a':
@@ -21,9 +20,7 @@ def automata_termina_ab(cadena):
                 estado = 'q1'
             elif simbolo == 'b':
                 estado = 'q0'
-    
     return estado == 'q2'  # Acepta si termina en estado q2
- 
 print("Aceptada")
 print("ab:", automata_termina_ab("ab"))        # True
 print("aab:", automata_termina_ab("aab"))      # True
